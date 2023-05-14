@@ -1,0 +1,55 @@
+JDBC notes
+RECAP
+We need to add mysql connector java dependency
+
+We need 3 things to work with DB
+address of DB - url
+Name of DB
+Username, password -
+
+1) Connection class - to establish the connection with DB
+2) Statement class - it allows us to send the query to the DB
+3) ResulSet class -  the result will be stored in its object
+4) result.next() - ti shift the cursor on to the next line / row
+5) ResultSetMetaData class - it contains the information about the result such as how many columns are there,
+                             how many rows, name of columns /row etc.
+
+rset - values
+rsetmetadata-column
+--------------------------------------------
+To integrate with framework, we will pass url,username,and password in config.prop file
+--------------------------------------------
+
+in order to integrate our DB in framework, we created DBUtility class in Utils package.
+
+---------------------------------------------
+"finally" key word = block of code will execute everytime.
+
+select *
+from hs_hr_employees
+where employee_id='12345';
+
+we have added a scenario in addEmployee feature file
+we have added steps in addEmployee Steps page
+we have added tag of results
+
+
+Scenario is to capture the employee id from UI
+and verify it with the DB
+for this, we have added scenario in feature file
+and added in step definitions
+
+then we are verifying firstname, middlename,lastname etc one by one
+because we can not compare bunch of values in one attempt
+
+
+
+
+
+
+-----------------------------------------
+if someone ask you What type assertion you are using.?
+- Junit Asseertion.
+If a test step fails but you want to keep running other tests,
+assertions help. They let you check conditions and continue testing even if a step fails.
+This helps you learn more about how the system works and find multiple issues in a single test

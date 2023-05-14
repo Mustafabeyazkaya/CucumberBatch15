@@ -3,3 +3,177 @@ this is the link that i can find any dependencies for maven project
 
  When user enters valid username "admin" and valid password "Hum@nhrm123"
  to write this step as this way named regular expression
+
+
+
+             #HOOKS: For defining pre and post steps(conditions) in any Cucumber framework
+                #     : This is always created inside the StepDefinitions folder
+                #     : This class con not be inherited
+                #     : Hooks will take care of pre- and post- conditions irrespective
+                #      : of what goes in between the test steps
+
+                #=======================================================================================
+
+                # BACKGROUND: Its the clubbing of common steps in different scenarios of a feature file
+                #             till flow is not broken
+                  # to READ DATA to implement to your project
+                # 1. Hard Coding (applied by Java) (by your writing)
+                # 2. Config File (applied by Java)(config.feature  in resources File)
+                #------Cucumber itself provides multiple option through which we can read data from feature file into Step Definition-----
+                # 3. Regular Expression (applied by Cucumber Feature)
+                    #put the data in double quotes [""]
+                    # Example: When user enters valid username "admin" and valid password "Hum@nhrm123"
+                # 4. Scenario Outline  [Parametrization],[Data Driven Testing][Browser will open and close number of times we have test data in Examples table]
+                    # Provide you an alternative to Data Driven Testing (DDT)
+                    # Also supports parametrization
+                    # Scenario Outline is always used along with the keyword Examples
+
+               #=======================================================================================
+
+                #----------PARAMETERIZATION--------------------
+                # Executing the same test case with multiple data
+                # Rules of Parameterization
+                    #if you want to use parameterization
+                    #if you wish to implement data driven testing
+                Page Object Model : An object Repository [ It stores or holds all the webElements specific to a particular page]
+
+
+
+                Data Table can do anything that ScenarioOutLine does
+                the only different is Data table launch the browser only 1 time when scenario-outline launch depend on the how many time it is implemented
+
+
+    Always add Apache poi dependencies to be working on excel sheets
+    ??What dependencies we need to work on excel sheet? (interview question)
+        1.Apache POI API Based on OPC and OOXML Schemas (Last version)
+        2.Apache POI Common (Last version)
+
+    Always add Apache commons IO also from maven repository (for taking screenshot and other stuff)
+
+
+
+    ****WHENEVER YOU CREATE A NEW PROJECT YOU NEED TO ADD THIS INTO YOUR POM WITH NO REASON,
+     JUST CHANGE THE VALUES AS PROJECT NAME (<projectName>CucumberBatch15</projectName>) AND RUNNERCLASS NAME****
+     <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <includes>
+                            <include>**/*SmokeRunner.java</include>
+                        </includes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>net.masterthought</groupId>
+                    <artifactId>maven-cucumber-reporting</artifactId>
+                    <version>5.7.5</version>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <projectName>CucumberBatch15</projectName>
+                                <!-- optional, per documentation set this to "true" to bypass generation of Cucumber Reports entirely, defaults to false if not specified -->
+                                <!-- output directory for the generated report -->
+                                <outputDirectory>${project.build.directory}</outputDirectory>
+                                <!-- optional, defaults to outputDirectory if not specified -->
+                                <inputDirectory>${project.build.directory}</inputDirectory>
+                                <jsonFiles>
+                                    <!-- supports wildcard or name pattern -->
+                                    <param>**/*.json</param>
+                                </jsonFiles>
+                                <!-- optional, defaults to outputDirectory if not specified -->
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+
+
+
+                    ***LOG4J DEPENDENCY***
+                        To add log4j dependencies go to maven repository and  search for log4j
+                        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+                        <dependency>
+                            <groupId>log4j</groupId>
+                            <artifactId>log4j</artifactId>
+                            <version>1.2.17</version>
+                        </dependency>
+
+                ***CREATE LOG4J.XML FILE IN YOUR PROJECT***
+                just right click on your project name and click on new then, select file and name it log4j.xml
+                it will be on pom.xml file , and add this code:
+
+
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+                <log4j:configuration debug="false"
+                                     xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+                    <appender name="fileAppender" class="org.apache.log4j.FileAppender">
+                        <param name="Threshold" value="INFO"/>
+                        <param name="File" value="logfile.log"/>
+
+                        <layout class="org.apache.log4j.PatternLayout">
+                            <param name="ConversionPattern"
+                                   value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+                        </layout>
+                    </appender>
+
+                    <root>
+                        <level value="INFO"/>
+                        <appender-ref ref="fileAppender"/>
+                    </root>
+
+                </log4j:configuration>
+
+
+
+***IF ANY OF YOUR DEPENDENCY GOT UPDATED,
+ WHAT YOU NEED TO DO IS JUST GO YOUR POM.XML AND HOVER YOUR MOUSE ON IT ANT IT WILL GIVE YOU NEW VERSION TO UPDATE***
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -------------MAVEN LIFECYCLE---------------
+ MAVEN LIFECYCLE= This consists of several phase
+ What do all maven lifecycle options (phases) do?
+ -clean = Removes all the files generated by the previous build (it removed the target folder to get it ready for next test execution)
+ -validate = it checks the project is correct and all the necessary information is available (usually developers use ite)
+ -compile = compiles the source code of the project
+ -test = runs the tests for project (whenever we run test phase, validate and compile phases also executed by automatically)
+ -package = packages the compiled code into a distributable format, such as JAR or WAR files
+ -verify = runs and check on results of integration tests to ensure quality criteria is met
+ -install = installs the package into local repository
+ -site = generates documentation for the project (usually developers use ite)
+ -deploy = copies the final package to remote repository for sharing with other developers or projects
+
+ which folder contains your dependencies repositories?
+ answer=  .m2 folder in Windows C >in users >in mbeya
+
+
+
+ ***TO add dependency for sql connector, search for latest version of mysql connector java
+
+ <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+ <dependency>
+     <groupId>mysql</groupId>
+     <artifactId>mysql-connector-java</artifactId>
+     <version>8.0.33</version>
+ </dependency>

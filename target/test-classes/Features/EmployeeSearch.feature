@@ -18,7 +18,7 @@ Feature: Searching the employee
     And user see employee information is displayed
     # And close the browser                                   , after we created Hooks class we don't ned this step           , this is in hooks class
 
-  @smoke1
+  @smoke4
     Scenario: Search Employee By Job Title
       # Given open the browser and launch HRMS application    , this is in hooks class
       # When user enters valid email and valid password       , this is in Background
