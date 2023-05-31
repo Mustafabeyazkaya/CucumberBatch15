@@ -102,7 +102,6 @@ public class DBUtility {
             }
         }
     }
-
     // close connection
     public static void closeConnection(Connection connec){
         if (connec!=null){

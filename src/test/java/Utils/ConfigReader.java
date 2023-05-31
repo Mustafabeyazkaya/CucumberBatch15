@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigReader {
+public class ConfigReader {//this is for UI part
     static Properties prop;
    public static Properties readProperties(){
        try {

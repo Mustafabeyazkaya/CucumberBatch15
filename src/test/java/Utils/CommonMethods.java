@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -25,14 +26,19 @@ import java.util.List;
 public class CommonMethods extends PageInitializer { // we always need to extend PageInitializer to CommonMethods to access it from anywhere
     public static WebDriver driver;
 
-
     public static void openBrowserAndLaunchApplication(){
         ConfigReader.readProperties();// we need to add this in this CommonMethods class to be accessed in anywhere
         // comes from ConfigReader class
         String browserType= ConfigReader.getPropertyValue("browserType");//reading data from the getPropertyValue Method
         switch (browserType){
             case "Chrome":
-                driver=new ChromeDriver();
+                ChromeOptions ops = new ChromeOptions();
+                ops.addArguments("--no-sandbox");
+                ops.addArguments("--remote-allow-origins=*");
+                if(ConfigReader.getPropertyValue("Headless").equals("true")){
+                    ops.addArguments("--headless=new");
+                }
+                driver=new ChromeDriver(ops);
                 break;
             case "Firefox":
                 driver=new FirefoxDriver();

@@ -20,7 +20,7 @@ Feature: Employee
 
   # this scenario will be for BackEnd part (from database) to compare values
     @database
-    Scenario: adding the employee from front end and verifying it from back end
+    Scenario: adding the employee from front-end and verifying it from back-end
       #When user enters valid email and valid password
       #And click on login button
       #When user clicks on PIM option

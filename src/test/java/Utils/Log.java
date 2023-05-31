@@ -2,7 +2,7 @@ package Utils;
 import io.cucumber.java.eo.Se;
 import org.apache.log4j.Logger;
 
-public class Log {
+public class Log {//this is for UI part
   public static  Logger log= Logger.getLogger(Log.class.getName()); // Logger class should be this "org.apache.log4j.Logger"
     // if you don't see the methods which your class have that you call from, make that object of class public and static, you will see those methods
     // When the test starts, I should print the logs

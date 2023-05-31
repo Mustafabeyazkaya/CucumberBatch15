@@ -169,7 +169,7 @@ this is the link that i can find any dependencies for maven project
 
 
 
- ***TO add dependency for sql connector, search for latest version of mysql connector java
+ ***TO add dependency for sql connector, search for latest version of mysql connector java***
 
  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
  <dependency>
@@ -177,3 +177,23 @@ this is the link that i can find any dependencies for maven project
      <artifactId>mysql-connector-java</artifactId>
      <version>8.0.33</version>
  </dependency>
+
+
+
+
+ ***for API Dependency we need to add REST assured library and json library***
+
+         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230227</version>
+        </dependency>
