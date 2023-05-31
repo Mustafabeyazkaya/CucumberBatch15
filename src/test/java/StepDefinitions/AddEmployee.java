@@ -8,7 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class AddEmployee extends CommonMethods { //we need to extend CommonMethods
+public class AddEmployee extends CommonMethods {//MUSTAFA
+    //we need to extend CommonMethods
     //public static AddEmployeePage addEmployeePage=new AddEmployeePage(); // you can delete this after you added this object into PageInitializer class
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
