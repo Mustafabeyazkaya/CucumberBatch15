@@ -174,3 +174,35 @@
 2023-05-31 19:14:40 INFO  Log:17 - ############################################
 2023-05-31 19:14:40 INFO  Log:18 - ############################################
 2023-05-31 19:14:40 INFO  Log:19 - ##############This test case is finished###################
+2023-05-31 19:31:37 INFO  Log:12 - ******************
+2023-05-31 19:31:37 INFO  Log:13 - ******************
+2023-05-31 19:31:37 INFO  Log:14 - ********This is the beginning of my Test case**********
+2023-05-31 19:31:37 INFO  Log:22 - My test case is executing right now
+2023-05-31 19:31:39 INFO  Log:22 - This test case is about to get completed
+2023-05-31 19:31:39 INFO  Log:17 - ############################################
+2023-05-31 19:31:39 INFO  Log:18 - ############################################
+2023-05-31 19:31:39 INFO  Log:19 - ##############This test case is finished###################
+2023-05-31 19:39:52 INFO  Log:12 - ******************
+2023-05-31 19:39:52 INFO  Log:13 - ******************
+2023-05-31 19:39:52 INFO  Log:14 - ********This is the beginning of my Test case**********
+2023-05-31 19:39:52 INFO  Log:22 - My test case is executing right now
+2023-05-31 19:39:54 INFO  Log:22 - This test case is about to get completed
+2023-05-31 19:39:54 INFO  Log:17 - ############################################
+2023-05-31 19:39:54 INFO  Log:18 - ############################################
+2023-05-31 19:39:54 INFO  Log:19 - ##############This test case is finished###################
+2023-05-31 19:40:02 INFO  Log:12 - ******************
+2023-05-31 19:40:02 INFO  Log:13 - ******************
+2023-05-31 19:40:02 INFO  Log:14 - ********This is the beginning of my Test case**********
+2023-05-31 19:40:02 INFO  Log:22 - My test case is executing right now
+2023-05-31 19:40:04 INFO  Log:22 - This test case is about to get completed
+2023-05-31 19:40:04 INFO  Log:17 - ############################################
+2023-05-31 19:40:04 INFO  Log:18 - ############################################
+2023-05-31 19:40:04 INFO  Log:19 - ##############This test case is finished###################
+2023-05-31 19:40:31 INFO  Log:12 - ******************
+2023-05-31 19:40:31 INFO  Log:13 - ******************
+2023-05-31 19:40:31 INFO  Log:14 - ********This is the beginning of my Test case**********
+2023-05-31 19:40:31 INFO  Log:22 - My test case is executing right now
+2023-05-31 19:40:33 INFO  Log:22 - This test case is about to get completed
+2023-05-31 19:40:33 INFO  Log:17 - ############################################
+2023-05-31 19:40:33 INFO  Log:18 - ############################################
+2023-05-31 19:40:33 INFO  Log:19 - ##############This test case is finished###################
