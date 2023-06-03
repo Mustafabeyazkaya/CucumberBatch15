@@ -5,7 +5,7 @@ import io.restassured.RestAssured;
 public class APIConstants {
 
     // CREATING CONSTANTS FOR ENDPOINTS
-    public static final String BaseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
+    public static final String BaseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api"; // you should always add " http://
     public static final String GENERATE_TOKEN_URI= BaseURI+"/generateToken.php";
     public static final String CREATE_EMPLOYEE_URI= BaseURI+"/createEmployee.php";
     public static final String GET_ONE_EMPLOYEE_URI=BaseURI+"/getOneEmployee.php";
