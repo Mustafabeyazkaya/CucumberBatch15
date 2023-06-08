@@ -10,7 +10,7 @@ Username, password -
 1) Connection class - to establish the connection with DB
 2) Statement class - it allows us to send the query to the DB
 3) ResulSet class -  the result will be stored in its object
-4) result.next() - ti shift the cursor on to the next line / row
+4) result.next() - to shift the cursor on to the next line / row
 5) ResultSetMetaData class - it contains the information about the result such as how many columns are there,
                              how many rows, name of columns /row etc.
 

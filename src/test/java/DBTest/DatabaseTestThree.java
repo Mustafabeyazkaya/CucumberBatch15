@@ -35,6 +35,7 @@ public class DatabaseTestThree {
                 System.out.println(map);
                 listFromRset.add(map);
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

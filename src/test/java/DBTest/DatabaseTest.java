@@ -34,7 +34,7 @@ public class DatabaseTest {
             System.out.println(firstName + " " + lastname);
 
             // this is the bad approach to retrieve values , go and check the DatabaseTestTwo class for better approach
-            result.next(); // we put this code to have access to the first value by passing by header of table
+            result.next(); // we put this code to have access to the second value by passing by header and first values of table
             firstName= result.getString("FirstName");
             lastname=result.getString("LastName");
             System.out.println(firstName + " " + lastname);
